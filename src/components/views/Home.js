@@ -5,9 +5,9 @@ export default (state, actions) => {
   return (
     <div>
       <div>
-        <input oninput={e => actions.getCities(e.target.value).then(cities => actions.addCitiesToState(cities))} />
+        <input oninput={e => actions.getCities(e.target.value).then(cities => actions.addSearchToState(cities))} />
       </div>
-      <CityResults cities={state.cityResults}></CityResults>
+      <CityResults cities={state.searchCities} getWeatherData={actions.getWeatherData}></CityResults>
     </div>
   )
 }

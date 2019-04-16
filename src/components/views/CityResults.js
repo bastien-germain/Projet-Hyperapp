@@ -4,7 +4,7 @@ const CityResults = (props) => {
   return (
     <div>
     {props.cities.map( city =>
-      <p>{city.properties.city}</p>
+      <p onclick={() => props.getWeatherData(city.geometry.coordinates)}>{city.properties.city}</p>
     )}
     </div>
   )
