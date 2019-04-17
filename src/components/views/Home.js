@@ -8,8 +8,8 @@ export default (state, actions) => {
       <div>
         <input oninput={e => actions.getCities(e.target.value).then(cities => actions.addSearchToState(cities))} />
       </div>
-      <CityResults cities={state.searchCities} getWeatherData={actions.getWeatherData}></CityResults>
-      <CitiesSaved savedCities={state.citiesSaved}></CitiesSaved>
+      <CityResults cities={state.searchCities} getWeatherData={actions.getWeatherData} createCity={actions.createCity}></CityResults>
+      <CitiesSaved savedCities={state.savedCities}></CitiesSaved>
     </div>
   )
 }

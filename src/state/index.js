@@ -3,7 +3,7 @@ export default {
     value: ''
   },
   searchCities: [],
-  citiesSaved: [
+  savedCities: [
     {
       id: 1,
       name: 'Paris',
