@@ -14,10 +14,6 @@ section {
   justify-content: center;
 }
 
-section > *+* {
-  margin-left: 2rem;
-}
-
 button {
   padding: 0 1rem;
   border: none;
@@ -37,27 +33,10 @@ p {
   margin-top: 0;
 }
 
-.count {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 4rem;
-  color: #333;
+/* A PARTIR DE LA, C'EST NOTRE CSS*/
+
+.savedCity {
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-[disabled] + .count {
-  color: #999;
-}
-
-.add {
-  background-color: mediumseagreen;
-  color: #fff;
-}
-
-.sub {
-  background-color: mediumvioletred;
-  color: #fff;
-}
-
-.sub[disabled] {
-  opacity: .5;
-}

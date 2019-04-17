@@ -1,12 +1,4 @@
 const actions = {
-  exampleSetState: (value) => (state) => ({
-    ...state,
-    input: {...state.input, value: value}
-  }),
-  logEvent: (payload) => (state) => {
-    console.log(payload.name, payload.event)
-    return state
-  },
   getCities: (value) => (state) => {
     return new Promise((resolve, reject) => {
 
