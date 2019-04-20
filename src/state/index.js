@@ -1,7 +1,7 @@
+import { location } from '@hyperapp/router'
+
 export default {
-  input: {
-    value: ''
-  },
+  location: location.state,
   searchCities: [],
   savedCities: [
     {

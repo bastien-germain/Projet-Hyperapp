@@ -1,8 +1,10 @@
-import { h } from 'hyperapp'
-import CityResults from './CityResults'
-import CitiesSaved from './CitiesSaved'
+// Page principale (ajout et suppression des villes)
 
-export default (state, actions) => {
+import { h } from 'hyperapp'
+import CityResults from '../components/CityResults'
+import CitiesSaved from '../components/CitiesSaved'
+
+const Home = (state, actions) => {
   return (
     <div>
       <div>
@@ -13,3 +15,5 @@ export default (state, actions) => {
     </div>
   )
 }
+
+export default Home

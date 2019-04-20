@@ -1,3 +1,5 @@
+// Affichage du résultat de la recherche d'une ville
+
 import { h } from 'hyperapp'
 
 const CityResults = (props) => {
