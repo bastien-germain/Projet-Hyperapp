@@ -8,7 +8,8 @@ const actions = {
   addSearchToState: manageState.addSearchToState,
   createCity: manageState.createCity,
   getCities: searchAPI.getCities,
-  getWeatherData: weatherAPI.getWeatherData
+  getWeatherData: weatherAPI.getWeatherData,
+  unixToHours: manageState.unixToHours
 }
 
 export default actions

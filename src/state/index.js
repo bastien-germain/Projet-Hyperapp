@@ -14,8 +14,8 @@ export default {
       summary: 'Breezy and mostly cloudy throughout the day.',
       humidity: 0.30,
       windSpeed: 1.00,
-      sunriseTime: 1555477671,
-      sunsetTime: 1555526331
+      sunriseTime: '8:00',
+      sunsetTime: '20:00'
     },
     {
       id: 2,
@@ -27,8 +27,8 @@ export default {
       summary: 'Breezy and mostly cloudy throughout the day.',
       humidity: 0.30,
       windSpeed: 1.00,
-      sunriseTime: 1555477671,
-      sunsetTime: 1555526331
+      sunriseTime: '8:00',
+      sunsetTime: '20:00'
     }
   ]
 }

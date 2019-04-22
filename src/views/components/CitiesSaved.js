@@ -6,7 +6,11 @@ const CitiesSaved = (props) => {
 	return (
 		<div>
     	{props.savedCities.map( savedCity =>
-    	  <div class="savedCity">{savedCity.name}</div>
+    	  <div class="savedCity">
+					<span>{savedCity.name}</span>
+					<span> Levé : {savedCity.sunriseTime}</span>
+					<span> Couché : {savedCity.sunsetTime}</span>
+				</div>
     	)}
     	</div>
 	)
