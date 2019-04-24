@@ -9,6 +9,7 @@ const actions = {
   createCity: manageState.createCity,
   changeDisplayedCity: manageState.changeDisplayedCity,
   updateInput: manageState.updateInput,
+  deleteCity: manageState.deleteCity,
   getCities: searchAPI.getCities,
   getWeatherData: weatherAPI.getWeatherData
 }

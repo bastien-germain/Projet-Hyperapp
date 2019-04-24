@@ -13,6 +13,13 @@ export const manageState = {
     savedCities: [...state.savedCities, {
       id: Date.now(),
       name: data.name,
+      latitude: data.latitude,
+      longitude: data.longitude,
+      temperature: Math.round(data.currently.temperature),
+      icon: data.currently.icon,
+      summary: data.currently.summary,
+      humidity: data.currently.humidity * 100, // Pour le passer en pourcentage
+      windSpeed: Math.round(data.currently.windSpeed),
       sunriseTime: manageState.unixToHours(data.daily.data[0].sunriseTime),
       sunsetTime: manageState.unixToHours(data.daily.data[0].sunsetTime)
     }]
@@ -35,5 +42,10 @@ export const manageState = {
   updateInput: (value) => (state) => ({
     ...state,
     input: value
-  })
+  }),
+  deleteCity: (id) => (state) => ({
+    ...state,
+    savedCities: state.savedCities.filter(city => city.id != id)
+  }),
+
 }
