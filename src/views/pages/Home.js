@@ -11,7 +11,7 @@ const Home = (state, actions) => {
         <input oninput={e => {actions.updateInput(e.target.value); actions.getCities(e.target.value).then(cities => actions.addSearchToState(cities))}} value={state.input}/>
       </div>
       <CityResults cities={state.searchCities} getWeatherData={actions.getWeatherData} createCity={actions.createCity}></CityResults>
-      <CitiesSavedHome savedCities={state.savedCities}></CitiesSavedHome>
+      <CitiesSavedHome savedCities={state.savedCities} changeDisplayedCity={actions.changeDisplayedCity}></CitiesSavedHome>
     </div>
   )
 }
