@@ -8,6 +8,8 @@ export const manageState = {
   }),
   createCity: (data) => (state) => ({
     ...state,
+    input: '',
+    searchCities: [],
     savedCities: [...state.savedCities, {
       id: Date.now(),
       name: data.name,
@@ -25,5 +27,13 @@ export const manageState = {
     const minutes = "0" + date.getMinutes()
 
     return hours + ':' + minutes.substr(-2)
-  }
+  },
+  changeDisplayedCity: (id) => (state) => ({
+    ...state,
+    displayedCity: {id: id}
+  }),
+  updateInput: (value) => (state) => ({
+    ...state,
+    input: value
+  })
 }

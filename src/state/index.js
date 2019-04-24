@@ -2,6 +2,7 @@ import { location } from '@hyperapp/router'
 
 export default {
   location: location.state,
+  input: '',
   searchCities: [],
   savedCities: [
     {
@@ -27,8 +28,11 @@ export default {
       summary: 'Breezy and mostly cloudy throughout the day.',
       humidity: 0.30,
       windSpeed: 1.00,
-      sunriseTime: '8:00',
-      sunsetTime: '20:00'
+      sunriseTime: '7:00',
+      sunsetTime: '21:42'
     }
-  ]
+  ],
+  displayedCity: {
+    id: 1
+  }
 }

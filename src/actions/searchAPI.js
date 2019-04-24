@@ -1,7 +1,7 @@
 // Fonctions relatives à l'API de recherche des villes
 
 export const searchAPI = {
-  getCities: (value) => (state) => {
+  getCities: (value) => {
     return new Promise((resolve, reject) => {
 
       const settings = {
@@ -11,7 +11,6 @@ export const searchAPI = {
 
       const urlAdresse = 'https://api-adresse.data.gouv.fr/search/?q='
       const urlParameters = '&limit=5&type=municipality'
-
       fetch(urlAdresse + value + urlParameters, settings).then(function(response) {
         if(response.ok) {
           response.json().then(json => {

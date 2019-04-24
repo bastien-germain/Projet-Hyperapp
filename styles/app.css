@@ -35,8 +35,25 @@ p {
 
 /* A PARTIR DE LA, C'EST NOTRE CSS*/
 
+/* Lien pratique pour flex : https://codepen.io/enxaneta/full/adLPwv */
+
 .savedCity {
   border: 2px solid black;
   border-radius: 5px;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.menuCity {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.fullDataCity {
+  border: 1px solid black;
+}

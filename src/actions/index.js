@@ -7,9 +7,10 @@ const actions = {
   location: location.actions, // Pour le router
   addSearchToState: manageState.addSearchToState,
   createCity: manageState.createCity,
+  changeDisplayedCity: manageState.changeDisplayedCity,
+  updateInput: manageState.updateInput,
   getCities: searchAPI.getCities,
-  getWeatherData: weatherAPI.getWeatherData,
-  unixToHours: manageState.unixToHours
+  getWeatherData: weatherAPI.getWeatherData
 }
 
 export default actions
