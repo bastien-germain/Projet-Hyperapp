@@ -18,7 +18,7 @@ export const manageState = {
       temperature: Math.round(data.currently.temperature),
       icon: data.currently.icon,
       summary: data.currently.summary,
-      humidity: data.currently.humidity * 100, // Pour le passer en pourcentage
+      humidity: Math.round(data.currently.humidity * 100), // Pour le passer en pourcentage
       windSpeed: Math.round(data.currently.windSpeed),
       sunriseTime: manageState.unixToHours(data.daily.data[0].sunriseTime),
       sunsetTime: manageState.unixToHours(data.daily.data[0].sunsetTime)
