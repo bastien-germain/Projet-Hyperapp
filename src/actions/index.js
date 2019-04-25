@@ -36,7 +36,7 @@ const actions = {
 
       const proxy = 'https://thingproxy.freeboard.io/fetch/'
       const url = 'https://api.darksky.net/forecast/4be7a39d36c8c138d23fd8c2bd29bd0a/'
-      const urlParam = '?units=ca'
+      const urlParam = '?units=ca&lang=fr'
 
       const settings = {
         mode: 'cors',
