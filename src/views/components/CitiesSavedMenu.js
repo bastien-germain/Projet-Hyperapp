@@ -1,0 +1,15 @@
+// Liste des villes sauvegardées (menu) pour la météo détaillée
+
+import { h } from 'hyperapp'
+
+const CitiesSavedMenu = (props) => {
+	return (
+		<div class="menu">
+    	{props.savedCities.map( savedCity =>
+    	  <div class="menuCity" onclick={() => props.changeDisplayedCity(savedCity.id)}>{savedCity.name}</div>
+    	)}
+    	</div>
+	)
+}
+
+export default CitiesSavedMenu

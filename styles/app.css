@@ -8,39 +8,33 @@ body {
   font-size: calc(10px + 2vmin);
 }
 
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button {
-  padding: 0 1rem;
-  border: none;
-  font-size: 2rem;
-  height: 3rem;
-}
-
-h1 {
-  font-size: calc(20px + 6vmin);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-p {
-  text-align: center;
-  margin-top: 0;
-}
-
 /* A PARTIR DE LA, C'EST NOTRE CSS*/
 
+/* Lien pratique pour flex : https://codepen.io/enxaneta/full/adLPwv */
+
+.savedCitiesWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .savedCity {
+  align-self: center;
   border: 2px solid black;
   border-radius: 5px;
 }
 
-.cityResult:hover {
-  cursor: pointer;
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
+.menuCity {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.fullDataCity {
+  border: 1px solid black;
+}
