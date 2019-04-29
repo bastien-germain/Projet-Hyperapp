@@ -1,12 +1,12 @@
 import { h } from 'hyperapp'
 import Chart from 'chart.js';
 
-export default (props) => {
+const Graph = (props) => {
 
-  var ville = props.savedCities
-  console.log(ville)
-  var coordinates = [ville[0].longitude, ville[0].latitude]
-  console.log(coordinates)
+  // var ville = props.savedCities
+  // console.log(ville)
+  // var coordinates = [ville[0].longitude, ville[0].latitude]
+  // console.log(coordinates)
   // var info = actions.getOldWeatherData(coordinates);
   // console.log(info)
 
@@ -55,3 +55,5 @@ export default (props) => {
     </div>
   )
 }
+
+export default Graph

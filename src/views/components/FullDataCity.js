@@ -1,6 +1,7 @@
 // Affiche toutes les données concernant une ville
 
 import { h } from 'hyperapp'
+import Graph from './Graph';
 
 const FullDataCity = (props) => {
 	return (
@@ -15,8 +16,10 @@ const FullDataCity = (props) => {
 					<p>Levé : {city.sunriseTime}</p>
 					<p>Couché : {city.sunsetTime}</p>
 				</div>
-    	)}
+      )}
+      <Graph/>
     	</div>
+
 	)
 }
 
