@@ -13,8 +13,8 @@ const FullDataCity = (props) => {
 					<p>Température : {city.temperature}°C</p>
 					<p>Humidité : {city.humidity}%</p>
 					<p>Vitesse du vent : {city.windSpeed} km/h</p>
-					<p>Levé : {city.sunriseTime}</p>
-					<p>Couché : {city.sunsetTime}</p>
+					<p>Lever : {city.sunriseTime}</p>
+					<p>Coucher : {city.sunsetTime}</p>
 				</div>
       )}
       <Graph/>
