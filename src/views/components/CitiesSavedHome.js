@@ -8,8 +8,8 @@ const CitiesSavedHome = (props) => {
 		<div class="savedCitiesWrapper">
     	{props.savedCities.map( savedCity =>
     	  <div class="savedCity">
-					<Link to='/cities' onclick={() => props.changeDisplayedCity(savedCity.id)}>{savedCity.name}</Link>
-					<button onclick={() => props.deleteCity(savedCity.id)}>Delete</button>
+						<Link to='/cities' onclick={() => props.changeDisplayedCity(savedCity.id)}>{savedCity.name}</Link>
+						<button onclick={() => props.deleteCity(savedCity.id)}>Delete</button>
 				</div>
     	)}
     	</div>
