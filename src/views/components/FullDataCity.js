@@ -10,7 +10,7 @@ const FullDataCity = (props) => {
     	  <div class="fullDataCity">
           <div class="header">
             <div class="picture">
-              <img class="icon" src="../../img/clear-day.png"/>
+              <img class="icon" src={city.iconPath}/>
             </div>
             <div class="info">
               <div class="city">

@@ -12,7 +12,7 @@ const CitiesSavedHome = (props) => {
 						<button onclick={() => props.deleteCity(savedCity.id)}>Delete</button>
 				</div>
     	)}
-    	</div>
+    </div>
 	)
 }
 

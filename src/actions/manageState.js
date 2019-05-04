@@ -16,7 +16,7 @@ export const manageState = {
       latitude: data.latitude,
       longitude: data.longitude,
       temperature: Math.round(data.currently.temperature),
-      icon: data.currently.icon,
+      iconPath: "../../img/" + data.currently.icon + ".png",
       summary: data.currently.summary,
       humidity: Math.round(data.currently.humidity * 100), // Pour le passer en pourcentage
       windSpeed: Math.round(data.currently.windSpeed),
