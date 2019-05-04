@@ -1,9 +1,21 @@
-import { app } from 'hyperapp'
-// import logger from '@hyperapp/logger'
+import { h, app } from 'hyperapp'
+import { Route, location } from "@hyperapp/router";
+
+import Layout from "./views/Layout.js";
+import Home from "./views/pages/Home.js";
+import Cities from "./views/pages/Cities.js";
 
 import actions from './actions'
 import state from './state'
-import view from './components/views/Home'
+
+const view = () => {
+  return (
+    <div>
+      <Route path='/' render={() => Layout({}, Home)}></Route>
+      <Route path='/cities' render={() => Layout({}, Cities)}></Route>
+    </div>
+  )
+}
 
 /*
 RAPPEL :
@@ -25,9 +37,5 @@ Une application hyperapp prend 4 paramètres:
    une application Hyperapp dans une sous-partie d'une page web.
  */
 
-app(
-  state,
-  actions,
-  view,
-  document.body
-)
+ const main = app(state, actions, view, document.body)
+ const unsubscribe = location.subscribe(main.location);
