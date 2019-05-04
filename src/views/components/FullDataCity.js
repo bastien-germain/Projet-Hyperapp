@@ -8,13 +8,38 @@ const FullDataCity = (props) => {
 		<div>
     	{props.savedCities.filter(city => city.id == props.cityId).map(city =>
     	  <div class="fullDataCity">
-					<p>{city.name}</p>
-					<p>Résumé : {city.summary}</p>
-					<p>Température : {city.temperature}°C</p>
-					<p>Humidité : {city.humidity}%</p>
-					<p>Vitesse du vent : {city.windSpeed} km/h</p>
-					<p>Lever : {city.sunriseTime}</p>
-					<p>Coucher : {city.sunsetTime}</p>
+          <div class="header">
+            <div class="picture">
+              <img class="icon" src="../../img/clear-day.png"/>
+            </div>
+            <div class="info">
+              <div class="city">
+                <p>{city.name}</p>
+                <p>{city.temperature}°C</p>
+              </div>
+              <div class="resume">
+                <p>{city.summary}</p>
+              </div>
+            </div>
+          </div>
+          <div class="details">
+            <div class="humidity">
+              <img class="smallicon" src="../../img/humidity.png"/>
+					    <p>Humidité : {city.humidity}%</p>
+            </div>
+            <div class="windspeed">
+              <img class="smallicon" src="../../img/windspeed.png"/>
+					    <p>Vitesse du vent : {city.windSpeed} km/h</p>
+            </div>
+            <div class="dawn">
+              <img class="smallicon" src="../../img/dawn.png"/>
+					    <p>Lever : {city.sunriseTime}</p>
+            </div>
+            <div class="dusk">
+              <img class="smallicon" src="../../img/dusk.png"/>
+					    <p>Coucher : {city.sunsetTime}</p>
+            </div>
+          </div>
 				</div>
       )}
       <Graph/>

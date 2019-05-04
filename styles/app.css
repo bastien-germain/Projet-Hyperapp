@@ -7,6 +7,9 @@ body {
   margin: 0;
   font-size: calc(10px + 2vmin);
   background-image:linear-gradient(#005a86, #5cc0f1);
+  font-family: "DejaVu Sans";
+  color : #043b57;
+
 }
 
 /* A PARTIR DE LA, C'EST NOTRE CSS*/
@@ -54,11 +57,78 @@ input {
 }
 
 .menuCity {
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.48);
   border-radius: 5px;
   padding: 2px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.iconSavedCities {
+  width: 20%; /* you can use % */
+  height: auto;
+  align-items: center;
+  padding: 30px;
+
 }
 
 .fullDataCity {
-  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.48);
+  border-radius: 5px;
+  padding : 30px;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  width: 20%; /* you can use % */
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.city {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.smallicon {
+  width: 3%; /* you can use % */
+  height: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.humidity {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.windspeed {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.dusk {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.dawn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
