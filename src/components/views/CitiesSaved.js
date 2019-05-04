@@ -4,7 +4,11 @@ const CitiesSaved = (props) => {
 	return (
 		<div>
     	{props.savedCities.map( savedCity =>
-    	  <div class="savedCity">{savedCity.name}</div>
+    	  <div class="savedCity">
+    	  	<img src='...'/>
+    	  	<span class="cityName">{savedCity.name}</span>
+    	  	<span class="cityTemperature">{savedCity.temperature}°C</span>
+    	  </div>
     	)}
     	</div>
 	)
