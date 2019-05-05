@@ -42,7 +42,6 @@ const FullDataCity = (props) => {
           </div>
 				</div>
       )}
-      <Graph/>
     	</div>
 
 	)
