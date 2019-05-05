@@ -19,22 +19,12 @@ const Graph = (props) => {
           var myChart = new Chart(element.id, {
             type: 'line',
             data: {
-              labels: ['1990', '1995', '2000', '2005', '2010', '2015'], // Labels of time 
+              labels: ['1990', '1995', '2000', '2005', '2010', '2015'], // Labels of time
               datasets: [{
                 label: 'Evolution de la température sur les 10 dernières années',
                 data: [12, 19, 3, 5, 2, 3], // The temperatures
-                backgroundColor: [
-                  'rgba(0, 0, 0, 0)'
-                ],
-                borderColor: [
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(54, 162, 235, 1)',
-                ],
-                borderWidth: 1
+                borderColor: '#f1c40f',
+                fill: false
               }]
             },
             options: {
@@ -44,6 +34,11 @@ const Graph = (props) => {
                     beginAtZero: true
                   }
                 }]
+              },
+              legend: {
+                labels: {
+                  fontColor: '#f1c40f'
+                }
               }
             }
           });

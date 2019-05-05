@@ -49,6 +49,16 @@ input {
   text-decoration: none;
 }
 
+.homeButton {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.homeButton:hover {
+  text-decoration: underline;
+}
+
 .menu {
   display: flex;
   justify-content: space-around;
