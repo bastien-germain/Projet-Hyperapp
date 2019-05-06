@@ -5,7 +5,7 @@ import FullDataCity from '../components/FullDataCity'
 
 const Cities = (state, actions) =>  (
   <div>
-    <Link to='/'>Home</Link>
+    <Link class='homeButton' to='/'>Home</Link>
     <h1>Météo détaillée</h1>
     <CitiesSavedMenu savedCities={state.savedCities} changeDisplayedCity={actions.changeDisplayedCity}></CitiesSavedMenu>
     <FullDataCity savedCities={state.savedCities} cityId={state.displayedCity.id}></FullDataCity>

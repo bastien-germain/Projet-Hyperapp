@@ -1,13 +1,12 @@
 body {
-  font-family: sans-serif;
+  font-family: "DejaVu Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
   font-size: calc(10px + 2vmin);
-  background-image:linear-gradient(#005a86, #5cc0f1);
-  font-family: "DejaVu Sans";
+  background-image: linear-gradient(#005a86, #5cc0f1);
   color : #043b57;
 
 }
@@ -21,7 +20,7 @@ h1 {
 }
 
 input {
-  background-color: #8ebccc;
+  background-color: rgba(255, 255, 255, 0.48);
   border-radius: 5px;
   width: 100%;
   height: 40px;
@@ -39,7 +38,7 @@ input {
   border-radius: 5px;
   margin-top: 10px;
   height: 90px;
-  background-color: #8ebccc;
+  background-color: rgba(255, 255, 255, 0.48);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -48,6 +47,16 @@ input {
 .savedCity a {
   color: black;
   text-decoration: none;
+}
+
+.homeButton {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.homeButton:hover {
+  text-decoration: underline;
 }
 
 .menu {
@@ -63,7 +72,8 @@ input {
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
+  width: 200px;
 }
 
 .iconSavedCities {
@@ -131,4 +141,3 @@ input {
   flex-direction: row;
   align-items: flex-start;
 }
-
