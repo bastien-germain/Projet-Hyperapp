@@ -7,7 +7,7 @@ const CitiesSavedMenu = (props) => {
 		<div class="menu">
     	{props.savedCities.map( savedCity =>
     	  <div class="menuCity" onclick={() => props.changeDisplayedCity(savedCity.id)}>
-	    	  <img class="iconSavedCities" src="../../img/clear-day.png"/>
+	    	  <img class="iconSavedCities" src={savedCity.iconPath}/>
 	    	  {savedCity.name}
 	    	  <p>{savedCity.temperature}°C</p>
     	  </div>

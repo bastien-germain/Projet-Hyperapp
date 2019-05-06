@@ -23,6 +23,7 @@ const Graph = (props) => {
               datasets: [{
                 label: 'Evolution de la température sur les 10 dernières années',
                 data: [12, 19, 3, 5, 2, 3], // The temperatures
+                backgroundColor: 'rgba(255, 255, 255, 0.48)',
                 borderColor: '#f1c40f',
                 fill: false
               }]
