@@ -10,6 +10,7 @@ const actions = {
   changeDisplayedCity: manageState.changeDisplayedCity,
   updateInput: manageState.updateInput,
   deleteCity: manageState.deleteCity,
+  selectCity: manageState.selectCity,
   getCities: searchAPI.getCities,
   getWeatherData: weatherAPI.getWeatherData
 }

@@ -10,7 +10,7 @@ const Home = (state, actions) => {
       <h1>Météo Right</h1>
       <input oninput={e => {actions.updateInput(e.target.value); actions.getCities(e.target.value).then(cities => actions.addSearchToState(cities))}} value={state.input}/>
       <CityResults cities={state.searchCities} getWeatherData={actions.getWeatherData} createCity={actions.createCity}></CityResults>
-      <CitiesSavedHome savedCities={state.savedCities} changeDisplayedCity={actions.changeDisplayedCity} deleteCity={actions.deleteCity}></CitiesSavedHome>
+      <CitiesSavedHome savedCities={state.savedCities} changeDisplayedCity={actions.changeDisplayedCity} deleteCity={actions.deleteCity} selectCity={actions.selectCity}></CitiesSavedHome>
     </div>
   )
 }

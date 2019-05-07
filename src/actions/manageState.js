@@ -12,6 +12,7 @@ export const manageState = {
     searchCities: [],
     savedCities: [...state.savedCities, {
       id: Date.now(),
+      selected: false,
       name: data.name,
       latitude: data.latitude,
       longitude: data.longitude,
@@ -47,5 +48,11 @@ export const manageState = {
     ...state,
     savedCities: state.savedCities.filter(city => city.id != id)
   }),
+  selectCity: (id) => (state) => ({
+    ...state,
+    savedCities: state.savedCities.map(city => (
+      id === city.id ? Object.assign({}, city, { selected: true }) : Object.assign({}, city, { selected: false })
+    ))
+  })
 
 }
