@@ -13,6 +13,7 @@ export const manageState = {
     savedCities: [...state.savedCities, {
       id: Date.now(),
       selected: false,
+      time: manageState.unixToHours(data.currently.time),
       name: data.name,
       latitude: data.latitude,
       longitude: data.longitude,

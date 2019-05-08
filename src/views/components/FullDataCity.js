@@ -19,6 +19,7 @@ const FullDataCity = (props) => {
               </div>
               <div class="resume">
                 <p>{city.summary}</p>
+								<p>Dernière mise à jour : {city.time}</p>
               </div>
             </div>
           </div>

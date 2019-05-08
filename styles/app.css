@@ -5,12 +5,9 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  font-size: calc(10px + 2vmin);
   background-image: linear-gradient(#005a86, #5cc0f1);
   color : #043b57;
 }
-
-/* A PARTIR DE LA, C'EST NOTRE CSS*/
 
 /* Lien pratique pour flex : https://codepen.io/enxaneta/full/adLPwv */
 
@@ -31,6 +28,19 @@ input {
   height: 40px;
   padding: 0;
   border: 0;
+}
+
+.cityResults {
+  background-color: #96C8DF;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: fixed;
+}
+
+.cityResults p {
+  width: 90%;
+  padding: 10px 0;
+  margin: auto;
 }
 
 .savedCitiesWrapper {
@@ -127,25 +137,7 @@ input {
   margin-top: 20px;
 }
 
-.humidity {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.windspeed {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.dusk {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.dawn {
+.humidity, .windSpeed, .dusk, .dawn {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
