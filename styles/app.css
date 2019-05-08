@@ -16,7 +16,6 @@ h1 {
 }
 
 canvas {
-  background-color: rgba(255, 255, 255, 0.25);
   margin-top: 20px;
 }
 
@@ -127,7 +126,12 @@ input {
 .city {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
 }
 
 .smallicon {
