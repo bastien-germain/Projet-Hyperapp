@@ -31,7 +31,9 @@ export const weatherAPI = {
       });
     })
   },
-  getPreviousWheather: (coordinates, time) => {
+  getPreviousForecast: (coordinates, index) => {
+    console.log("On est dans la putain de fonction de tes grands morts")
+    console.log(coordinates)
     return new Promise((resolve, reject) => {
 
       const longitude = coordinates[0]
@@ -45,6 +47,11 @@ export const weatherAPI = {
         mode: 'cors',
         method: 'GET'
       }
+
+      const i = index
+      console.log("Index = "+i)
+
+      let time = 1494707180 - (63072000 * i)
 
       fetch(proxy + url + latitude + ',' + longitude + ',' + time + urlParam, settings).then(function(response) {
         if (response.ok) {
@@ -61,13 +68,12 @@ export const weatherAPI = {
       });
     })
   },
-  getPreviousDatas: (coordinates) => {
-    let datas = []
-    for (let i = 0; i < 5; i++) { // On va envoyer 5 requêtes
-      datas = [...datas, weatherAPI.getPreviousWheather(coordinates, /** time en UNIX */null,)]
-    }
-    return 
-  }
+  
+  //   for (let i = 0; i < 5; i++) { // On va envoyer 5 requêtes
+  //     datas = [...datas, weatherAPI.getPreviousWheather(coordinates, /** time en UNIX */null,)]
+  //   }
+  //   return datas
+  // }
 }
 
 // https://api.darksky.net/forecast/[key]/[latitude],[longitude],[time]
