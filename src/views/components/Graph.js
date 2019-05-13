@@ -13,7 +13,7 @@ const Graph = (props) => {
   // Fonction qui récupère les informations anciennes à partir de l'api
 
   return (
-    <div>
+    <div class="chart-container">
       <canvas
         oncreate={element => {
           var myChart = new Chart(element.id, {
@@ -44,9 +44,8 @@ const Graph = (props) => {
             }
           });
         }}
-        id='myChart'
-        width='400'
-        height="400">
+        id='tempChart'
+        >
       </canvas>
     </div>
   )

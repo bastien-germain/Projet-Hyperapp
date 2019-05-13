@@ -1,6 +1,7 @@
 body {
   font-family: "DejaVu Sans", sans-serif;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -87,7 +88,6 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
 }
 
 .selectedCity {
@@ -103,6 +103,7 @@ input {
 }
 
 .fullDataCity {
+  width : 50%;
   background-color: rgba(255, 255, 255, 0.48);
   border-radius: 5px;
   padding : 30px;
@@ -113,20 +114,30 @@ input {
   flex-direction: row;
 }
 
+.picture {
+  flex: 30%;
+}
+
 .icon {
-  width: 20%; /* you can use % */
+  width: 70%; /* you can use % */
   height: auto;
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  flex: 70%;
+}
+
+.update {
+  font-size: 10px;
 }
 
 .city {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-size: 30px;
 }
 
 .details {
@@ -134,15 +145,53 @@ input {
   justify-content: space-around;
 }
 
+.update {
+  font-size: 10px;
+}
+
 .smallicon {
-  width: 3%; /* you can use % */
+  width: 20%; /* you can use % */
   height: auto;
   margin-right: 20px;
   margin-top: 20px;
 }
 
-.humidity, .windSpeed, .dusk, .dawn {
+.currentDataTitle p{
+  margin-bottom: 0px;
+}
+
+.currentDataValue p{
+  color: #03273a;
+  margin-top: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.humidity, .windspeed, .dusk, .dawn {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.leftData{
+  width: 50%;
+}
+
+.rain {
+  width: 50%;
+}
+
+.fullPage{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto; 
+}
+
+.chartContainer{
+  width: 50%;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.48);
+  border-radius: 5px;
+  padding : 30px;
 }
