@@ -24,7 +24,9 @@ const FullDataCity = (props) => {
               </div>
               <div class="resume">
                 <p>{city.summary}</p>
-								<p>Dernière mise à jour : {city.time}</p>
+              </div>
+              <div class="update">
+                <p>Dernière mise à jour : {city.time}</p>
               </div>
             </div>
           </div>
@@ -44,7 +46,10 @@ const FullDataCity = (props) => {
 	            </div>
 	            <div class="dusk">
 	              <img class="smallicon" src="../../img/dusk.png"/>
-						    <p>Coucher : {city.sunsetTime}</p>
+						    <div class="currentData">
+                  <p>Coucher</p>
+                  {city.sunsetTime}
+                </div>
 	            </div>
 	          </div>
 						<div class="rain">
