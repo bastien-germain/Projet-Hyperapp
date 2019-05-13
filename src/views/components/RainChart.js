@@ -11,7 +11,7 @@ const RainChart = (props) => {
           data: {
             datasets: [
               {
-                backgroundColor: ["#3e95cd", "rgba(255, 255, 255, 0)"],
+                backgroundColor: ["#3e95cd", "rgba(255, 255, 255, 0.5)"],
 
                 data: [props.precipProbability, 100 - props.precipProbability]
               }
@@ -21,7 +21,7 @@ const RainChart = (props) => {
             cutoutPercentage : 80,
             elements: {
               arc: {
-                borderWidth: 0
+                borderWidth: 0,
               }
             },
             tooltips: {
