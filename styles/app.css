@@ -1,6 +1,7 @@
 body {
   font-family: "DejaVu Sans", sans-serif;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -102,6 +103,7 @@ input {
 }
 
 .fullDataCity {
+  width : 50%;
   background-color: rgba(255, 255, 255, 0.48);
   border-radius: 5px;
   padding : 30px;
@@ -150,4 +152,13 @@ input {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+
+.fullPage{
+  display: flex;
+  flex-direction: row;
+}
+
+.tempChart{
+  
 }

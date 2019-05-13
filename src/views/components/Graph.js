@@ -44,9 +44,8 @@ const Graph = (props) => {
             }
           });
         }}
-        id='myChart'
-        width='400'
-        height="400">
+        id='tempChart'
+        >
       </canvas>
     </div>
   )

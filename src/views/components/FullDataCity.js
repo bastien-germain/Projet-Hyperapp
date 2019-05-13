@@ -6,7 +6,7 @@ import RainChart from './RainChart'
 
 const FullDataCity = (props) => {
 	return (
-		<div>
+		<div class="fullPage">
     	{props.savedCities.filter(city => city.id == props.cityId).map(city =>
     	  <div class="fullDataCity">
           <div class="header">
