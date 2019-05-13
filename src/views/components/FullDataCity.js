@@ -25,29 +25,56 @@ const FullDataCity = (props) => {
 	              </div>
 	              <div class="resume">
 	                <p>{city.summary}</p>
-									<p>Dernière mise à jour : {city.time}</p>
+                  <div class="update">
+									  <p>Dernière mise à jour : {city.time}</p>
+                  </div>
 	              </div>
 	            </div>
 	          </div>
 						<div class="details">
-		          <div>
+		          <div class="leftData">
 		            <div class="humidity">
 		              <img class="smallicon" src="../../img/humidity.png"/>
-							    <p>Humidité : {city.humidity}%</p>
+                  <div class="currentData">
+                    <div class="currentDataTitle">
+							        <p>Humidité</p>
+                    </div>
+                    <div class="currentDataValue"> 
+                      <p>{city.humidity}%</p>
+                    </div>  
+                  </div>
 		            </div>
 		            <div class="windspeed">
 		              <img class="smallicon" src="../../img/windspeed.png"/>
-							    <p>Vitesse du vent : {city.windSpeed} km/h</p>
+                  <div class="currentData">
+                    <div class="currentDataTitle">
+							        <p>Vitesse du vent</p>
+                    </div>
+                    <div class="currentDataValue">
+                      <p>{city.windSpeed} km/h</p>
+                    </div>
+                  </div>
 		            </div>
 		            <div class="dawn">
 		              <img class="smallicon" src="../../img/dawn.png"/>
-							    <p>Lever : {city.sunriseTime}</p>
+                  <div class="currentData">
+                    <div class="currentDataTitle">
+							        <p>Lever</p>
+                    </div>
+                    <div class="currentDataValue">
+                      <p>{city.sunriseTime}</p>
+                    </div>  
+                  </div>
 		            </div>
 		            <div class="dusk">
 		              <img class="smallicon" src="../../img/dusk.png"/>
 							    <div class="currentData">
-                    <p>Coucher</p>
-                    {city.sunsetTime}
+                    <div class="currentDataTitle">
+                      <p>Coucher</p>
+                    </div>
+                    <div class="currentDataValue">
+                      <p>{city.sunsetTime}</p>
+                    </div>  
                   </div>
 		            </div>
 		          </div>
@@ -56,7 +83,9 @@ const FullDataCity = (props) => {
 							</div>
 						</div>
 					</div>
-					<HourlyRainChart hourlyData={city.hourlyPrecipProbability}></HourlyRainChart>
+          <div class="chartContainer">
+					  <HourlyRainChart hourlyData={city.hourlyPrecipProbability}></HourlyRainChart>
+          </div>  
 				</div>
       )}
     	</div>

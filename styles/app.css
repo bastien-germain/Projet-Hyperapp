@@ -145,6 +145,10 @@ input {
   justify-content: space-around;
 }
 
+.update {
+  font-size: 10px;
+}
+
 .smallicon {
   width: 20%; /* you can use % */
   height: auto;
@@ -152,17 +156,42 @@ input {
   margin-top: 20px;
 }
 
+.currentDataTitle p{
+  margin-bottom: 0px;
+}
+
+.currentDataValue p{
+  color: #03273a;
+  margin-top: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
 .humidity, .windspeed, .dusk, .dawn {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.leftData{
+  width: 50%;
+}
+
+.rain {
+  width: 50%;
 }
 
 .fullPage{
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
+  width: 80%;
+  margin: auto; 
 }
 
-.chart-container{
+.chartContainer{
   width: 50%;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.48);
+  border-radius: 5px;
+  padding : 30px;
 }

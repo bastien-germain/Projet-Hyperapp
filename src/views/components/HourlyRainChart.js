@@ -14,8 +14,8 @@ const HourlyRainChart = (props) => {
               datasets: [{
                 label: 'Risque de pluie sur les 12 prochaines heures',
                 data: props.hourlyData,
-                backgroundColor: 'rgba(255, 255, 255, 0.48)',
-                borderColor: '#f1c40f',
+                backgroundColor: 'rgba(255, 255, 255, 0)',
+                borderColor: '#043b57',
                 fill: false
               }]
             },
@@ -29,7 +29,7 @@ const HourlyRainChart = (props) => {
               },
               legend: {
                 labels: {
-                  fontColor: '#f1c40f'
+                  fontColor: '#043b57'
                 }
               }
             }
