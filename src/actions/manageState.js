@@ -18,7 +18,7 @@ export const manageState = {
       latitude: data.latitude,
       longitude: data.longitude,
       temperature: Math.round(data.currently.temperature),
-      iconPath: "../../img/" + data.currently.icon + ".png",
+      iconPath: '../../img/' + data.currently.icon + '.png',
       summary: data.currently.summary,
       precipProbability: Math.round(data.currently.precipProbability * 100), // Pour le passer en pourcentage
       humidity: Math.round(data.currently.humidity * 100),
