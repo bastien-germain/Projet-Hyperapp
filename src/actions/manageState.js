@@ -24,7 +24,21 @@ export const manageState = {
       humidity: Math.round(data.currently.humidity * 100),
       windSpeed: Math.round(data.currently.windSpeed),
       sunriseTime: manageState.unixToHours(data.daily.data[0].sunriseTime),
-      sunsetTime: manageState.unixToHours(data.daily.data[0].sunsetTime)
+      sunsetTime: manageState.unixToHours(data.daily.data[0].sunsetTime),
+      hourlyPrecipProbability : [
+        Math.round(data.hourly.data[1].precipProbability * 100),
+        Math.round(data.hourly.data[2].precipProbability * 100),
+        Math.round(data.hourly.data[3].precipProbability * 100),
+        Math.round(data.hourly.data[4].precipProbability * 100),
+        Math.round(data.hourly.data[5].precipProbability * 100),
+        Math.round(data.hourly.data[6].precipProbability * 100),
+        Math.round(data.hourly.data[7].precipProbability * 100),
+        Math.round(data.hourly.data[8].precipProbability * 100),
+        Math.round(data.hourly.data[9].precipProbability * 100),
+        Math.round(data.hourly.data[10].precipProbability * 100),
+        Math.round(data.hourly.data[11].precipProbability * 100),
+        Math.round(data.hourly.data[12].precipProbability * 100)
+      ]
     }]
   }),
   unixToHours: (unixTime) => {

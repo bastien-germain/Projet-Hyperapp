@@ -1,64 +1,64 @@
 // Affiche toutes les données concernant une ville
 
 import { h } from 'hyperapp'
-import Graph from './Graph'
+import HourlyRainChart from './HourlyRainChart'
 import RainChart from './RainChart'
 
 const FullDataCity = (props) => {
 	return (
-		<div class="fullPage">
+		<div>
     	{props.savedCities.filter(city => city.id == props.cityId).map(city =>
-    	  <div class="fullDataCity">
-          <div class="header">
-            <div class="picture">
-              <img class="icon" src={city.iconPath}/>
-            </div>
-            <div class="info">
-              <div class="city">
-                <div class="name">
-                  {city.name}
-                </div>
-                <div class="temperature">
-                  {city.temperature}°C
-                </div>
-              </div>
-              <div class="resume">
-                <p>{city.summary}</p>
-              </div>
-              <div class="update">
-                <p>Dernière mise à jour : {city.time}</p>
-              </div>
-            </div>
-          </div>
-					<div class="details">
-	          <div>
-	            <div class="humidity">
-	              <img class="smallicon" src="../../img/humidity.png"/>
-						    <p>Humidité : {city.humidity}%</p>
+				<div class="fullPage">
+	    	  <div class="fullDataCity">
+	          <div class="header">
+	            <div class="picture">
+	              <img class="icon" src={city.iconPath}/>
 	            </div>
-	            <div class="windspeed">
-	              <img class="smallicon" src="../../img/windspeed.png"/>
-						    <p>Vitesse du vent : {city.windSpeed} km/h</p>
-	            </div>
-	            <div class="dawn">
-	              <img class="smallicon" src="../../img/dawn.png"/>
-						    <p>Lever : {city.sunriseTime}</p>
-	            </div>
-	            <div class="dusk">
-	              <img class="smallicon" src="../../img/dusk.png"/>
-						    <div class="currentData">
-                  <p>Coucher</p>
-                  {city.sunsetTime}
-                </div>
+	            <div class="info">
+	              <div class="city">
+	                <div class="name">
+	                  {city.name}
+	                </div>
+	                <div class="temperature">
+	                  {city.temperature}°C
+	                </div>
+	              </div>
+	              <div class="resume">
+	                <p>{city.summary}</p>
+									<p>Dernière mise à jour : {city.time}</p>
+	              </div>
 	            </div>
 	          </div>
-						<div class="rain">
-							<RainChart precipProbability={city.precipProbability}></RainChart>
+						<div class="details">
+		          <div>
+		            <div class="humidity">
+		              <img class="smallicon" src="../../img/humidity.png"/>
+							    <p>Humidité : {city.humidity}%</p>
+		            </div>
+		            <div class="windspeed">
+		              <img class="smallicon" src="../../img/windspeed.png"/>
+							    <p>Vitesse du vent : {city.windSpeed} km/h</p>
+		            </div>
+		            <div class="dawn">
+		              <img class="smallicon" src="../../img/dawn.png"/>
+							    <p>Lever : {city.sunriseTime}</p>
+		            </div>
+		            <div class="dusk">
+		              <img class="smallicon" src="../../img/dusk.png"/>
+							    <div class="currentData">
+                    <p>Coucher</p>
+                    {city.sunsetTime}
+                  </div>
+		            </div>
+		          </div>
+							<div class="rain">
+								<RainChart precipProbability={city.precipProbability}></RainChart>
+							</div>
 						</div>
 					</div>
+					<HourlyRainChart hourlyData={city.hourlyPrecipProbability}></HourlyRainChart>
 				</div>
       )}
-			<Graph></Graph>
     	</div>
 
 	)
