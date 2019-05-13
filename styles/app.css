@@ -157,8 +157,15 @@ input {
 .fullPage{
   display: flex;
   flex-direction: row;
+  /* Pour changer les marges de chaque côtés : */
+  width : 80%;
+  margin: auto;
 }
 
 .tempChart{
-  
+
+}
+
+.chart-container{
+  width: 50%;
 }
