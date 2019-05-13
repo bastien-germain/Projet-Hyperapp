@@ -12,7 +12,9 @@ const actions = {
   deleteCity: manageState.deleteCity,
   selectCity: manageState.selectCity,
   getCities: searchAPI.getCities,
-  getWeatherData: weatherAPI.getWeatherData
+  getWeatherData: weatherAPI.getWeatherData,
+  getPreviousForecast: weatherAPI.getPreviousForecast,
+  addPreviousForecast: manageState.addPreviousForecast
 }
 
 export default actions
