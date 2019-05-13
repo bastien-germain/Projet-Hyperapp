@@ -14,8 +14,12 @@ const FullDataCity = (props) => {
             </div>
             <div class="info">
               <div class="city">
-                <p>{city.name}</p>
-                <p>{city.temperature}°C</p>
+                <div class="name">
+                  {city.name}
+                </div>
+                <div class="temperature">
+                  {city.temperature}°C
+                </div>
               </div>
               <div class="resume">
                 <p>{city.summary}</p>

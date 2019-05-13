@@ -79,7 +79,6 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
 }
 
 .iconSavedCities {
@@ -101,6 +100,10 @@ input {
   flex-direction: row;
 }
 
+.picture {
+  flex: 30%;
+}
+
 .icon {
   width: 20%; /* you can use % */
   height: auto;
@@ -109,12 +112,14 @@ input {
 .info {
   display: flex;
   flex-direction: column;
+  flex: 70%;
 }
 
 .city {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 30px;
 }
 
 .smallicon {
@@ -124,25 +129,7 @@ input {
   margin-top: 20px;
 }
 
-.humidity {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.windspeed {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.dusk {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.dawn {
+.humidity, .windspeed, .dusk, .dawn {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
