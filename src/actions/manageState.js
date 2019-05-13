@@ -12,13 +12,16 @@ export const manageState = {
     searchCities: [],
     savedCities: [...state.savedCities, {
       id: Date.now(),
+      selected: false,
+      time: manageState.unixToHours(data.currently.time),
       name: data.name,
       latitude: data.latitude,
       longitude: data.longitude,
       temperature: Math.round(data.currently.temperature),
       iconPath: "../../img/" + data.currently.icon + ".png",
       summary: data.currently.summary,
-      humidity: Math.round(data.currently.humidity * 100), // Pour le passer en pourcentage
+      precipProbability: Math.round(data.currently.precipProbability * 100), // Pour le passer en pourcentage
+      humidity: Math.round(data.currently.humidity * 100),
       windSpeed: Math.round(data.currently.windSpeed),
       sunriseTime: manageState.unixToHours(data.daily.data[0].sunriseTime),
       sunsetTime: manageState.unixToHours(data.daily.data[0].sunsetTime)
@@ -47,5 +50,11 @@ export const manageState = {
     ...state,
     savedCities: state.savedCities.filter(city => city.id != id)
   }),
+  selectCity: (id) => (state) => ({
+    ...state,
+    savedCities: state.savedCities.map(city => (
+      id === city.id ? Object.assign({}, city, { selected: true }) : Object.assign({}, city, { selected: false })
+    ))
+  })
 
 }

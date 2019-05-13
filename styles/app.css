@@ -5,13 +5,9 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  font-size: calc(10px + 2vmin);
   background-image: linear-gradient(#005a86, #5cc0f1);
   color : #043b57;
-
 }
-
-/* A PARTIR DE LA, C'EST NOTRE CSS*/
 
 /* Lien pratique pour flex : https://codepen.io/enxaneta/full/adLPwv */
 
@@ -20,7 +16,6 @@ h1 {
 }
 
 canvas {
-  background-color: rgba(255, 255, 255, 0.25);
   margin-top: 20px;
 }
 
@@ -32,6 +27,19 @@ input {
   height: 40px;
   padding: 0;
   border: 0;
+}
+
+.cityResults {
+  background-color: #96C8DF;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: fixed;
+}
+
+.cityResults p {
+  width: 90%;
+  padding: 10px 0;
+  margin: auto;
 }
 
 .savedCitiesWrapper {
@@ -81,6 +89,10 @@ input {
   align-items: center;
 }
 
+.selectedCity {
+  background-color: rgba(255, 255, 255, 0.68);
+}
+
 .iconSavedCities {
   width: 20%; /* you can use % */
   height: auto;
@@ -120,6 +132,11 @@ input {
   flex-direction: row;
   justify-content: space-between;
   font-size: 30px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
 }
 
 .smallicon {
