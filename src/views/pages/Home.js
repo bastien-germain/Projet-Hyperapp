@@ -9,8 +9,8 @@ const Home = (state, actions) => {
     <div>
       <h1>Météo Right</h1>
       <input oninput={e => {actions.updateInput(e.target.value); actions.getCities(e.target.value).then(cities => actions.addSearchToState(cities))}} value={state.input}/>
-      <CityResults cities={state.searchCities} getWeatherData={actions.getWeatherData} createCity={actions.createCity}></CityResults>
-      <CitiesSavedHome savedCities={state.savedCities} changeDisplayedCity={actions.changeDisplayedCity} deleteCity={actions.deleteCity} selectCity={actions.selectCity}></CitiesSavedHome>
+      <CityResults cities={state.searchCities} getWeatherData={actions.getWeatherData} createCity={actions.createCity} getPreviousForecast={actions.getPreviousForecast} addPreviousForecast={actions.addPreviousForecast}></CityResults>
+      <CitiesSavedHome savedCities={state.savedCities} getPreviousForecast={actions.getPreviousForecast} changeDisplayedCity={actions.changeDisplayedCity} deleteCity={actions.deleteCity} selectCity={actions.selectCity}></CitiesSavedHome>
     </div>
   )
 }
