@@ -19,10 +19,10 @@ const Graph = (props) => {
           var myChart = new Chart(element.id, {
             type: 'line',
             data: {
-              labels: ['1990', '1995', '2000', '2005', '2010', '2015'], // Labels of time
+              labels: ['2010', '2011', '2013', '2015', '2017', '2019'], // Labels of time
               datasets: [{
                 label: 'Evolution de la température sur les 10 dernières années',
-                data: [12, 19, 3, 5, 2, 3], // The temperatures
+                data: props.previousForecast, // The temperatures
                 backgroundColor: 'rgba(255, 255, 255, 0.48)',
                 borderColor: '#f1c40f',
                 fill: false

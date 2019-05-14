@@ -3,6 +3,7 @@
 import { h } from 'hyperapp'
 import HourlyRainChart from './HourlyRainChart'
 import RainChart from './RainChart'
+import Graph from './Graph';
 
 const FullDataCity = (props) => {
 	return (
@@ -85,6 +86,9 @@ const FullDataCity = (props) => {
 					</div>
           <div class="chartContainer">
 					  <HourlyRainChart hourlyData={city.hourlyPrecipProbability}></HourlyRainChart>
+          </div>
+          <div>
+          <Graph previousForecast={city.previousForecast}></Graph>  
           </div>  
 				</div>
       )}

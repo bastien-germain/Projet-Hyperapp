@@ -38,7 +38,7 @@ export const manageState = {
         Math.round(data.hourly.data[10].precipProbability * 100),
         Math.round(data.hourly.data[11].precipProbability * 100),
         Math.round(data.hourly.data[12].precipProbability * 100)
-      ]
+      ],
     }]
   }),
   unixToHours: (unixTime) => {
@@ -69,6 +69,12 @@ export const manageState = {
     savedCities: state.savedCities.map(city => (
       id === city.id ? Object.assign({}, city, { selected: true }) : Object.assign({}, city, { selected: false })
     ))
+  }),
+  addPreviousForecast: (data) => (state) => ({
+    ...state,
+    savedCities: state.savedCities.map(city => (
+      city.latitude == data.latitude && city.longitude == data.longitude ? { ...city, previousForecast: city.previousForecast ? [data.currently.temperature, ...city.previousForecast ] : [data.currently.temperature]}  : {...city}
+    ))
+    //console.log(data)
   })
-
 }
