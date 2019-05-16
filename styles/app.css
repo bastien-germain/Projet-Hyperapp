@@ -43,6 +43,10 @@ input {
   margin: auto;
 }
 
+.cityResults p:hover {
+  cursor: pointer;
+}
+
 .savedCitiesWrapper {
   display: flex;
   flex-direction: column;
