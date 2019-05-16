@@ -73,7 +73,7 @@ export const manageState = {
   addPreviousForecast: (data) => (state) => ({
     ...state,
     savedCities: state.savedCities.map(city => (
-      city.latitude == data.latitude && city.longitude == data.longitude ? { ...city, previousForecast: city.previousForecast ? [data.currently.temperature, ...city.previousForecast ] : [data.currently.temperature]}  : {...city}
+      city.latitude == data.latitude && city.longitude == data.longitude ? { ...city, previousForecast: city.previousForecast ? [data.currently.temperature, ...city.previousForecast] : [data.currently.temperature]}  : {...city}
     ))
     //console.log(data)
   })
