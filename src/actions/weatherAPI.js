@@ -32,7 +32,6 @@ export const weatherAPI = {
     })
   },
   getPreviousForecast: (data) => {
-    console.log("On est dans la putain de fonction de tes grands morts")
     //console.log(coordinates)
     return new Promise((resolve, reject) => {
 
@@ -55,7 +54,7 @@ export const weatherAPI = {
         if (response.ok) {
           response.json().then(json => {
             console.log("Previous forecast")
-            console.log(json.currently)
+            console.log(json.currently.temperature)
             resolve(json)
           })
         } else {
