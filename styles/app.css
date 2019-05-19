@@ -181,6 +181,15 @@ input {
   width: 50%;
 }
 
+.rainData{
+  position: relative;
+  top: 50%;
+}
+
+.rainChart{
+  top: 50%;
+}
+
 .fullPage{
   display: flex;
   flex-direction: row;

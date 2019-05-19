@@ -79,7 +79,12 @@ const FullDataCity = (props) => {
 		            </div>
 		          </div>
 							<div class="rain">
-								<RainChart precipProbability={city.precipProbability}></RainChart>
+                <div class="rainData">
+                  <p>{city.precipProbability}%</p>
+                </div>
+                <div class="rainChart">
+								  <RainChart precipProbability={city.precipProbability}></RainChart>
+                </div>  
 							</div>
 						</div>
 					</div>
