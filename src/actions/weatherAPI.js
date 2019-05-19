@@ -19,7 +19,6 @@ export const weatherAPI = {
       fetch(proxy + url + latitude + ',' + longitude + urlParam, settings).then(function(response) {
         if(response.ok) {
           response.json().then(json => {
-              // console.log(json)
               resolve(json)
           })
         } else {
@@ -32,7 +31,6 @@ export const weatherAPI = {
     })
   },
   getPreviousForecast: (data) => {
-    //console.log(coordinates)
     return new Promise((resolve, reject) => {
 
       const longitude = data.coordinates[0]
@@ -46,15 +44,9 @@ export const weatherAPI = {
         mode: 'cors',
         method: 'GET'
       }
-
-      // let time = Math.round(Date.now()/1000) - (63072000 * i)
-      console.log(data.time)
-
       fetch(proxy + url + latitude + ',' + longitude + ',' + data.time + urlParam, settings).then(function(response) {
         if (response.ok) {
           response.json().then(json => {
-            console.log("Previous forecast")
-            console.log(json.currently.temperature)
             resolve(json)
           })
         } else {
@@ -66,12 +58,6 @@ export const weatherAPI = {
       });
     })
   },
-  
-  //   for (let i = 0; i < 5; i++) { // On va envoyer 5 requêtes
-  //     datas = [...datas, weatherAPI.getPreviousWheather(coordinates, /** time en UNIX */null,)]
-  //   }
-  //   return datas
-  // }
 }
 
 // https://api.darksky.net/forecast/[key]/[latitude],[longitude],[time]

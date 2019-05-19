@@ -3,15 +3,6 @@ import Chart from 'chart.js';
 
 const previousForecast = (props) => {
 
-  // var ville = props.savedCities
-  // console.log(ville)
-  // var coordinates = [ville[0].longitude, ville[0].latitude]
-  // console.log(coordinates)
-  // var info = actions.getOldWeatherData(coordinates);
-  // console.log(info)
-
-  // Fonction qui récupère les informations anciennes à partir de l'api
-
   const dataObject = {
     type: 'line',
     data: {
@@ -42,7 +33,6 @@ const previousForecast = (props) => {
 
 
 
-
   return (
     <div class="chart-container">
       <canvas
@@ -52,7 +42,7 @@ const previousForecast = (props) => {
         }}
         
         onupdate={element => {
-          console.log("Updated")
+          console.log("updated")
         }}
 
         onremove={element => {
