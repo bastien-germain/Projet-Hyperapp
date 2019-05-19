@@ -19,7 +19,7 @@ export const weatherAPI = {
       fetch(proxy + url + latitude + ',' + longitude + urlParam, settings).then(function(response) {
         if(response.ok) {
           response.json().then(json => {
-              console.log(json)
+              // console.log(json)
               resolve(json)
           })
         } else {
@@ -31,13 +31,12 @@ export const weatherAPI = {
       });
     })
   },
-  getPreviousForecast: (coordinates, index) => {
-    console.log("On est dans la putain de fonction de tes grands morts")
-    console.log(coordinates)
+  getPreviousForecast: (data) => {
+    //console.log(coordinates)
     return new Promise((resolve, reject) => {
 
-      const longitude = coordinates[0]
-      const latitude = coordinates[1]
+      const longitude = data.coordinates[0]
+      const latitude = data.coordinates[1]
 
       const proxy = 'https://thingproxy.freeboard.io/fetch/'
       const url = 'https://api.darksky.net/forecast/4be7a39d36c8c138d23fd8c2bd29bd0a/'
@@ -48,15 +47,14 @@ export const weatherAPI = {
         method: 'GET'
       }
 
-      const i = index
-      console.log("Index = "+i)
+      // let time = Math.round(Date.now()/1000) - (63072000 * i)
+      console.log(data.time)
 
-      let time = 1494707180 - (63072000 * i)
-
-      fetch(proxy + url + latitude + ',' + longitude + ',' + time + urlParam, settings).then(function(response) {
+      fetch(proxy + url + latitude + ',' + longitude + ',' + data.time + urlParam, settings).then(function(response) {
         if (response.ok) {
           response.json().then(json => {
-            console.log(json)
+            console.log("Previous forecast")
+            console.log(json.currently.temperature)
             resolve(json)
           })
         } else {

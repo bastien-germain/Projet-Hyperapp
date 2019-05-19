@@ -3,12 +3,15 @@
 import { h } from 'hyperapp'
 import HourlyRainChart from './HourlyRainChart'
 import RainChart from './RainChart'
+import PreviousForecast from './PreviousForecastChart';
 
 const FullDataCity = (props) => {
+  console.log(props.cityId)
 	return (
 		<div>
     	{props.savedCities.filter(city => city.id == props.cityId).map(city =>
 				<div class="fullPage">
+        {console.log(city.previousForecast)}
 	    	  <div class="fullDataCity">
 	          <div class="header">
 	            <div class="picture">
@@ -90,6 +93,9 @@ const FullDataCity = (props) => {
 					</div>
           <div class="chartContainer">
 					  <HourlyRainChart hourlyData={city.hourlyPrecipProbability}></HourlyRainChart>
+          </div>
+          <div class="chartContainer">
+          <PreviousForecast previousForecast={city.previousForecast}></PreviousForecast>  
           </div>  
 				</div>
       )}
