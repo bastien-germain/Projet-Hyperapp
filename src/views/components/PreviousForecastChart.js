@@ -24,6 +24,7 @@ const previousForecast = (props) => {
         }]
       },
       legend: {
+        display: false,
         labels: {
           fontColor: '#03273a'
         }

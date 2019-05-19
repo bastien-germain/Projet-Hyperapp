@@ -93,10 +93,16 @@ const FullDataCity = (props) => {
 						</div>
 					</div>
           <div class="chartContainer">
-					  <HourlyRainChart hourlyData={city.hourlyPrecipProbability}></HourlyRainChart>
+            <div class="titreGraphe">
+              <p>Risque de pluie dans les prochaines heures (en %)</p>
+					  </div>
+            <HourlyRainChart hourlyData={city.hourlyPrecipProbability}></HourlyRainChart>
           </div>
           <div class="chartContainer">
-          <PreviousForecast previousForecast={city.previousForecast}></PreviousForecast>  
+            <div class="titreGraphe">
+              <p>Evolution de la température sur les dix dernières années (en °C)</p>
+            </div>
+            <PreviousForecast previousForecast={city.previousForecast}></PreviousForecast>  
           </div>  
 				</div>
       )}
