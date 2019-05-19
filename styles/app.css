@@ -30,6 +30,19 @@ input {
   border: 0;
 }
 
+button {
+   border-color: white;
+   border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005a86;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border-color: #005a86
+}
+
 .title {
   display: flex;
   flex-direction: row;
