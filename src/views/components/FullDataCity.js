@@ -83,6 +83,7 @@ const FullDataCity = (props) => {
 		          </div>
 							<div class="rain">
                 <div class="rainData">
+                  <img class="umbrella" src="../../img/umbrella.png"/>
                   <p>{city.precipProbability}%</p>
                 </div>
                 <div class="rainChart">

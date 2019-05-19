@@ -30,6 +30,42 @@ input {
   border: 0;
 }
 
+.title {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title h1 {
+  flex: 50%;
+  align-items: center;
+}
+
+.logo {
+  width: 15%; /* you can use % */
+  height: auto;
+  padding: 30px;
+}
+
+.titleCities {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  align-items: center;
+}
+
+.title2 {
+  margin: 30px;
+}
+
+.logoCities {
+  width: 15%; /* you can use % */
+  height: auto;
+  padding: 30px;
+}
+
 .cityResults {
   background-color: #96C8DF;
   border-radius: 5px;
@@ -185,9 +221,21 @@ input {
   width: 50%;
 }
 
-.rainData{
+.rainData {
   position: relative;
-  top: 50%;
+  top: 92px;
+  left: 70px;
+
+}
+
+.rainData p {
+  margin-top: 3px;  
+  font-size: 14px;
+}
+
+.umbrella {
+  width: 15%; /* you can use % */
+  height: auto;
 }
 
 .rainChart{
