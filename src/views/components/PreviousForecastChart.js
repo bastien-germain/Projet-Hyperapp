@@ -4,14 +4,14 @@ import Chart from 'chart.js';
 const previousForecast = (props) => {
 
   const dataObject = {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: ['2009', '2011', '2013', '2015', '2017', '2019'], // Labels of time
       datasets: [{
         label: 'Evolution de la température sur les 10 dernières années',
         data: props.previousForecast, // The temperatures
-        backgroundColor: 'rgba(255, 255, 255, 0.48)',
-        borderColor: '#f1c40f',
+        backgroundColor: 'rgba(3, 39, 58, 1)',
+        borderColor: '#03273a',
         fill: false
       }]
     },
@@ -25,7 +25,7 @@ const previousForecast = (props) => {
       },
       legend: {
         labels: {
-          fontColor: '#f1c40f'
+          fontColor: '#03273a'
         }
       }
     }
