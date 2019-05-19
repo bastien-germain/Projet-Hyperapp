@@ -6,7 +6,7 @@ import CitiesSavedHome from '../components/CitiesSavedHome'
 
 const Home = (state, actions) => {
   return (
-    <div>
+    <div class="results">
       <div class="title">
         <img class="logo" src="../../img/meteorite.png"/>
         <h1>Météo Right</h1>
