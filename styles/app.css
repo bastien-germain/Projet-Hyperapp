@@ -255,7 +255,7 @@ button:hover {
 }
 
 .rainData p {
-  margin-top: 3px;  
+  margin-top: 3px;
   font-size: 14px;
 }
 
@@ -272,7 +272,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   width: 80%;
-  margin: auto; 
+  margin: auto;
   margin-bottom: 50px;
 }
 
@@ -282,6 +282,23 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.48);
   border-radius: 5px;
   padding : 30px;
+}
+
+@media screen and (max-width: 640px) {
+  .fullPage {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .chartContainer {
+    margin: 0;
+    width: initial;
+    margin-top: 10px;
+  }
+
+  .fullDataCity {
+    width : initial;
+  }
 }
 
 .titreGraphe p{
